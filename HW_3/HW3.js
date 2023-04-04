@@ -67,6 +67,6 @@ alert(str.split(',').join(', блин'));//вывод, блин;
     let youTube = prompt('Введите ссылку с видео');//вводим ссылку на видео;
     const regExp = /(?:https?:\/\/)?(?:www\.)?youtu(?:\.be\/|be.com\/\S*(?:watch|embed)(?:(?:(?=\/[-a-zA-Z0-9_]{11,}(?!\S))\/)|(?:\S*v=|v\/)))([-a-zA-Z0-9_]{11,})/;//пишем регулярное выражение для проверки ссылки;
     let arr = youTube.match(regExp);//применяем регулярное выражение для проверки ссылки;
-    let video_ID = arr.join([1]);//извлекаем ID видоса;
+    let video_ID = arr[1];//извлекаем ID видоса;
     document.write(`<iframe width="560" height="315" src="https://www.youtube.com/embed/${video_ID}" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>`);//отправляем видос на страницу;
 }
